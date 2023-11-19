@@ -13,6 +13,7 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 
 add_executable(${PROJECT_NAME}
 	${CMAKE_SOURCE_DIR}/src/xdg-shell.c
+	${CMAKE_SOURCE_DIR}/src/shm.c
 	${CMAKE_SOURCE_DIR}/src/main.c
 )
-target_link_libraries(${PROJECT_NAME} PRIVATE wayland-client)
+target_link_libraries(${PROJECT_NAME} PRIVATE wayland-client rt)
